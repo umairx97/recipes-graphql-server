@@ -40,7 +40,12 @@ app.use('/graphql',
     }))
 
 // DB Connections
-mongoose.connect(process.env.MONGO_URI || "mongodb://localhost:27017/reactGraphql", { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGO_URI || "mongodb://localhost:27017/reactGraphql",
+    {
+        useNewUrlParser: true,
+        useCreateIndex: true,
+        useUnifiedTopology: true
+    })
     .then(() => console.log("Mongoose open for business"))
     .catch(err => console.error("DATABASE ERROR", err.message))
 
