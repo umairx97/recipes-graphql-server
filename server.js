@@ -39,6 +39,7 @@ app.use('/graphql',
         context: { User, Recipe }
     }))
 
+
 // DB Connections
 mongoose.connect(process.env.MONGO_URI || "mongodb://localhost:27017/reactGraphql",
     {
